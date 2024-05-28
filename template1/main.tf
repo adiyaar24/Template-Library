@@ -35,17 +35,6 @@ resource "harness_platform_connector_helm" "this" {
   url         = "https://rssnyder.github.io/feature-flag-relay-proxy"
 }
 
-resource "harness_platform_connector_docker" "this" {
-  org_id      = data.harness_platform_organization.this.id
-  project_id  = data.harness_platform_project.this.id
-  identifier  = "ff_relay_proxy_docker"
-  name        = "ff relay proxy"
-  description = "Connection to dockerhub for relay proxy"
-  tags        = ["source:templateLibrary"]
-  type        = "DockerHub"
-  url         = "https://index.docker.io/v2/"
-}
-
 resource "harness_platform_connector_github" "test" {
   org_id          = data.harness_platform_organization.this.id
   project_id      = data.harness_platform_project.this.id
@@ -112,7 +101,7 @@ service:
           primaryArtifactRef: <+input>
           sources:
             - spec:
-                connectorRef: ${harness_platform_connector_docker.this.id}
+                connectorRef: <+input>
                 imagePath: harness/ff-proxy
                 tag: <+input>
                 digest: ""
