@@ -1,0 +1,5 @@
+{
+    "Category": "IaCM,FF",
+    "Name": "Feature Flag Relay Proxy ECS",
+    "ShortDescription": "Deploys the FF Relay Proxy to AWS using ECS and IaCM"
+}
