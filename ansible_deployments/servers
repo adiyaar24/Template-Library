@@ -1,0 +1,10 @@
+{
+    "name": "<+serviceVariables.APP_NAME>",
+    "id"  : "<+serviceVariables.APP_ID>",
+    "server": "192.168.0.3"
+},
+{
+    "name": "<+serviceVariables.APP_NAME>",
+    "id"  : "<+serviceVariables.APP_ID>",
+    "server": "192.168.0.6"
+}
