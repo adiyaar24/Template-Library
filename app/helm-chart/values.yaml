@@ -8,7 +8,7 @@ image:
   repository: suranc/harness-template-library
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "<+artifact.tag>"
+  tag: "<+artifacts.primary.tag>"
 
 imagePullSecrets: []
 nameOverride: ""
