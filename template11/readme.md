@@ -1,5 +1,5 @@
 | Key          | Value                   |
 |--------------|-------------------------|
 | Category     | Project                 |
-| Name         | Create Kubernetes Service         |
+| Name         | Create an Environment         |
 | ShortDescription | This is my Short Description |

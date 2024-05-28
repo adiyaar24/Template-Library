@@ -1,5 +1,5 @@
 | Key          | Value                   |
 |--------------|-------------------------|
 | Category     | Project                 |
-| Name         | Create Kubernetes Service         |
+| Name         | Deploy Kubernetes          |
 | ShortDescription | This is my Short Description |

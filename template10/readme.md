@@ -1,5 +1,5 @@
 | Key          | Value                   |
 |--------------|-------------------------|
-| Category     | Project                 |
-| Name         | Create Kubernetes Service         |
+| Category     | Account                 |
+| Name         | Create a secret in AWS Secret Manager |
 | ShortDescription | This is my Short Description |
