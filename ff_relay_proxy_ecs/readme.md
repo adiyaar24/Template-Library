@@ -1,5 +1,5 @@
 | Key          | Value                   |
 |--------------|-------------------------|
-| Category     | Organization            |
-| Name         | Create Org RBAC         |
-| ShortDescription | This is my Short Description |
+| Category     | FF,IaCM          |
+| Name         | Feature Flag Relay Proxy ECS         |
+| ShortDescription | Deploys the FF Relay Proxy to AWS using ECS and IaCM |
