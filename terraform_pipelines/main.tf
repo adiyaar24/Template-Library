@@ -38,7 +38,8 @@ pipeline:
   identifier: apply
   projectIdentifier: ${data.harness_platform_project.this.id}
   orgIdentifier: ${data.harness_platform_organization.this.id}
-  tags: {}
+  tags:
+    source: templateLibrary
   stages:
     - stage:
         name: apply
@@ -118,7 +119,8 @@ pipeline:
   identifier: destroy
   projectIdentifier: ${data.harness_platform_project.this.id}
   orgIdentifier: ${data.harness_platform_organization.this.id}
-  tags: {}
+  tags:
+    source: templateLibrary
   stages:
     - stage:
         name: destroy
