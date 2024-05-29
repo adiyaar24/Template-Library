@@ -1,4 +1,3 @@
-import re
 import requests
 import os
 from json import loads
@@ -89,7 +88,10 @@ def fetch_templates_endpoint():
     filtered_templates = []
     for template in templates:
         info = template["info"]
-        key_values = info["key_values"]
+        key_values = info.get("key_values")
+        if not key_values:
+            print(f'broken template: {template.get("path")}')
+            continue
 
         if (
             category_filter
