@@ -1,5 +1,8 @@
 {
+  "headings": [],
+  "key_values": {
     "Category": "Terraform",
     "Name": "Terraform Pipelines",
     "ShortDescription": "Provision pipelines for common terraform workflows"
+  }
 }
