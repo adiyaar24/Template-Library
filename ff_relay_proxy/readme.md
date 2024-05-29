@@ -1,5 +1,5 @@
 | Key          | Value                   |
 |--------------|-------------------------|
-| Category     | Account                 |
-| Name         | Create a Secret         |
-| ShortDescription | This is my Short Description |
+| Category     | FF,CD                 |
+| Name         | Feature Flag Relay Proxy Kubernetes Deployment         |
+| ShortDescription | Creates a service definition to quickly deploy the relay proxy in a kubernetes cluster |
