@@ -33,6 +33,13 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: GITHUB_TOKEN
+              value: "{{ .Values.githubToken }}"
+            - name: REPO_OWNER
+              value: "{{ .Values.repoOwner }}"
+            - name: REPO_NAME
+              value: "{{ .Values.repoName }}"
           ports:
             - name: http
               containerPort: 5000
