@@ -1,5 +1,9 @@
 {
+  "headings": [],
+  "key_values": {
     "Category": "CD",
+    "Key": "Value",
     "Name": "Custom Deployment Template for Ansible",
     "ShortDescription": "Run ansible using CD using a custom deployment template and pipeline"
+  }
 }
