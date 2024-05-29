@@ -109,6 +109,36 @@ def fetch_templates_endpoint():
     return response
 
 
+@app.route("/provision", methods=["POST"])
+def provision():
+    templ = request.args.get("template")
+    if not templ:
+        return
+
+    resp = requests.post(
+        "https://app.harness.io/gateway/pipeline/api/webhook/custom/Aaxe-ny_QlqmOWupcUSNaA/v3",
+        headers={"content-type": "application/json"},
+        params={
+            "accountIdentifier": "Ompd5rAMSfq97LoZsErwnQ",
+            "orgIdentifier": "default",
+            "projectIdentifier": "TemplateLibrary",
+            "pipelineIdentifier": "deploy_template",
+            "triggerIdentifier": "demoui",
+        },
+        json={"template": templ},
+    )
+
+    try:
+        request.raise_for_status()
+        data = resp.json()
+    except:
+        return
+
+    response = jsonify(data)
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
+
+
 @app.route("/health_check", methods=["GET"])
 def health_check_endpoint():
     return "Healthy"
