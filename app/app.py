@@ -113,7 +113,7 @@ def fetch_templates_endpoint():
 def provision():
     templ = request.args.get("template")
     if not templ:
-        return
+        return "No template provided", 400
 
     resp = requests.post(
         "https://app.harness.io/gateway/pipeline/api/webhook/custom/Aaxe-ny_QlqmOWupcUSNaA/v3",
@@ -132,7 +132,7 @@ def provision():
         request.raise_for_status()
         data = resp.json()
     except:
-        return
+        return "Error triggering pipeline", 400
 
     response = jsonify(data)
     response.headers.add("Access-Control-Allow-Origin", "*")
