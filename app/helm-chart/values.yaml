@@ -46,7 +46,7 @@ service:
 
 ingress:
   enabled: <+serviceVariables.ingress>
-  className: ""
+  className: "nginx"
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
@@ -54,7 +54,7 @@ ingress:
     - host: template-library.k8s.rileysnyder.dev
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
