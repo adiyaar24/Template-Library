@@ -1,0 +1,5 @@
+{
+    "Category": ["CI","CD","STO"],
+    "Name": "Example Release Pipeline Template",
+    "ShortDescription": "An example pipeline template intended to push code to production from a release branch."
+}
