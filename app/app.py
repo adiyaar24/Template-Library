@@ -85,7 +85,7 @@ def fetch_templates_endpoint():
 
     templates = fetch_templates(directory)
 
-    filtered_templates = []
+    filtered_templates = {"templates": []}
     for template in templates:
         info = template["info"]
         key_values = info.get("key_values")
@@ -102,7 +102,7 @@ def fetch_templates_endpoint():
         if search_query and search_query not in key_values.get("Name", "").lower():
             continue
 
-        filtered_templates.append(template)
+        filtered_templates["templates"].append(template)
 
     return jsonify(filtered_templates)
 
