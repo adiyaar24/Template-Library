@@ -46,11 +46,11 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /fetch_templates
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /fetch_templates
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
