@@ -129,9 +129,10 @@ def provision():
     )
 
     try:
-        request.raise_for_status()
+        resp.raise_for_status()
         data = resp.json()
     except:
+        print(resp.text)
         return "Error triggering pipeline", 400
 
     response = jsonify(data)
