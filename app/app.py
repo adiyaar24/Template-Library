@@ -104,7 +104,9 @@ def fetch_templates_endpoint():
 
         filtered_templates["templates"].append(template)
 
-    return jsonify(filtered_templates)
+    response = jsonify(filtered_templates)
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 
 
 @app.route("/health_check", methods=["GET"])
