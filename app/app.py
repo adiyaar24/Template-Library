@@ -116,6 +116,10 @@ def fetch_templates_endpoint():
     
     return jsonify(filtered_templates)
 
+@app.route('/health_check', methods=['GET'])
+def health_check_endpoint():
+    return "Healthy"
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 
