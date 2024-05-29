@@ -10,7 +10,7 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "<+artifacts.primary.tag>"
 
-githubToken: <+secrets.getValue("adiyaar24-github-pat")>
+githubToken: <+secrets.getValue("suranc-template-library-github-pat")>
 repoOwner: "adiyaar24"
 repoName: "Template-Library"
 
