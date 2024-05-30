@@ -1,5 +1,5 @@
 | Key          | Value                   |
 |--------------|-------------------------|
-| Category     | IaCM                 |
-| Name         | IaCM Pipelines         |
-| ShortDescription | Provision pipelines for common IaCM workflows |
+| Category     | "CI","CD","STO"                 |
+| Name         | Example PR Pipeline Template         |
+| ShortDescription | An example pipeline template intended to push code to a preview/test environment branch from a Pull Request. |
