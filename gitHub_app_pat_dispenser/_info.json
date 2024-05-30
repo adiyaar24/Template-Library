@@ -1,8 +1,8 @@
 {
   "headings": [],
   "key_values": {
-    "Category": "Project",
+    "Category": "SecretManager",
     "Name": "Custom secrets manager for dispensing github PATs",
-    "ShortDescription": "Creates a custom secrets manager and connector to generate github PATs for a github app with a given installation id"
+    "ShortDescription": "Create a custom secrets manager and connector to generate GitHub PATs from a GitHub App"
   }
 }

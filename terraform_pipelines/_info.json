@@ -3,6 +3,6 @@
   "key_values": {
     "Category": "Terraform",
     "Name": "Terraform Pipelines",
-    "ShortDescription": "Provision pipelines for common terraform workflows"
+    "ShortDescription": "Create pipelines for common Terraform workflows"
   }
 }

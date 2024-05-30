@@ -3,6 +3,6 @@
   "key_values": {
     "Category": "IaCM",
     "Name": "IaCM Pipelines",
-    "ShortDescription": "Provision pipelines for common IaCM workflows"
+    "ShortDescription": "Create pipelines for common IaCM workflows"
   }
 }
