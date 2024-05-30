@@ -1,0 +1,8 @@
+{
+    "headings": [],
+    "key_values": {
+        "Category": ["CI","CD","STO"],
+        "Name": "Google CloudRun with Canary",
+        "ShortDescription": "A set of templates to add suppot for deploying to GCP CloudRun using canary, including Continous Verification."
+    }
+  }
