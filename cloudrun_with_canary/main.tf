@@ -348,7 +348,7 @@ template:
           identifier: Deploy_to_Test
           tags: {}
           template:
-            templateRef: ${harness_platform_template.deploy_cloudrun_canary.id}
+            templateRef: ${harness_platform_template.deploy_cloudrun_with_canary.id}
             versionLabel: "1"
             gitBranch: master
             templateInputs:
@@ -392,7 +392,7 @@ template:
           identifier: Deploy_to_Prod
           tags: {}
           template:
-            templateRef: ${harness_platform_template.deploy_cloudrun_canary.id}
+            templateRef: ${harness_platform_template.deploy_cloudrun_with_canary.id}
             versionLabel: "1"
             templateInputs:
               type: Deployment
