@@ -26,10 +26,11 @@ pipeline:
                         configFiles:
                           store:
                             spec:
-                              connectorRef: adiyaar24_templatelibrary_repo_connector
+                              connectorRef: account.Aditya_Github_Account_Connector
                               gitFetchType: Branch
                               branch: main
                               folderPath: <+input>
+                              repoName: Template-Library
                             type: Github
                         environmentVariables:
                           - name: HARNESS_ACCOUNT_ID
