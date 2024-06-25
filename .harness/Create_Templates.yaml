@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: deploy template
+        name: Deploy Template
         identifier: deploy_template
         description: ""
         type: Custom
