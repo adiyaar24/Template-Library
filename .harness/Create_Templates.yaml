@@ -1,0 +1,42 @@
+pipeline:
+  name: Create Template
+  identifier: Create_Template
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: deploy template
+        identifier: deploy_template
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: TerraformApply
+                  name: apply
+                  identifier: apply
+                  spec:
+                    provisionerIdentifier: apply
+                    configuration:
+                      type: Inline
+                      skipStateStorage: true
+                      spec:
+                        configFiles:
+                          store:
+                            spec:
+                              connectorRef: adiyaar24_templatelibrary_repo_connector
+                              gitFetchType: Branch
+                              branch: main
+                              folderPath: <+input>
+                            type: Github
+                        environmentVariables:
+                          - name: HARNESS_ACCOUNT_ID
+                            value: <+account.identifier>
+                            type: String
+                          - name: HARNESS_PLATFORM_API_KEY
+                            value: <+secrets.getValue("account.harness_platform_api_key")>
+                            type: String
+                  timeout: 10m
+        tags: {}
