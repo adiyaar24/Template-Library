@@ -54,6 +54,9 @@ pipeline:
                             value: <+secrets.getValue("account.harness_platform_api_key")>
                             type: String
                   timeout: 10m
+                  when:
+                    stageStatus: Success
+                    condition: "false"
           environment:
             environmentRef: account.Prod_Env
             deployToAll: false
