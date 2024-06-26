@@ -14,6 +14,20 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+env.variables.*>
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+              - step:
                   type: TerraformApply
                   name: apply
                   identifier: apply
@@ -40,4 +54,14 @@ pipeline:
                             value: <+secrets.getValue("account.harness_platform_api_key")>
                             type: String
                   timeout: 10m
+          environment:
+            environmentRef: account.Prod_Env
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: harness_K8sInfra
+                inputs:
+                  identifier: harness_K8sInfra
+                  type: KubernetesDirect
+                  spec:
+                    provisioner: <+input>
         tags: {}
