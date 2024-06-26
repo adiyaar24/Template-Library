@@ -24,8 +24,8 @@ pipeline:
                       type: Inline
                       spec:
                         script: |-
-                          <+env.variables.test>
-                          <+env.variables.*>
+                          echo <+env.variables.test>
+                          echo <+env.variables.*>
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
